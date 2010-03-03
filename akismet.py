@@ -202,7 +202,6 @@ class Akismet(object):
         It raises an ``AkismetError`` if the user IP or user-agent can't be
         worked out.
         """
-        data['comment_content'] = comment
         if not 'user_ip' in data:
             try:
                 val = os.environ['REMOTE_ADDR']
@@ -309,6 +308,7 @@ class Akismet(object):
             raise APIKeyError("Your have not set an API key.")
         if data is None:
             data = {}
+        data['comment_content'] = comment
         if build_data:
             self._build_data(comment, data)
         if 'blog' not in data:
