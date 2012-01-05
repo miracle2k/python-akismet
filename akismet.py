@@ -350,7 +350,7 @@ class Akismet(object):
         # we *don't* trap the error here
         # so if akismet is down it will raise an HTTPError or URLError
         headers = {'User-Agent' : self.user_agent}
-        self._safeRequest(url, urlencode(data), headers)
+        self._safeRequest(url, urlencode(data, doseq=True), headers)
 
 
     def submit_ham(self, comment, data=None, build_data=True):
@@ -371,4 +371,5 @@ class Akismet(object):
         # we *don't* trap the error here
         # so if akismet is down it will raise an HTTPError or URLError
         headers = {'User-Agent' : self.user_agent}
-        self._safeRequest(url, urlencode(data), headers)
+        self._safeRequest(url, urlencode(data, doseq=True), headers)
+
