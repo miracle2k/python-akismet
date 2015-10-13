@@ -1,4 +1,4 @@
-# Version 0.2.0
+# Version 0.3.0
 # Copyright Michael Foord 2005-2009
 # akismet.py
 # Python interface to the akismet API
@@ -22,10 +22,10 @@ value.
 
 The default is : ::
 
-    Python Interface by Fuzzyman | akismet.py/0.2.0
+    Python Interface by Fuzzyman | akismet.py/0.3.0
 
 Whatever you pass in, will replace the *Python Interface by Fuzzyman* part.
-**0.2.0** will change with the version of this interface.
+**0.3.0** will change with the version of this interface.
 
 Usage example::
     
